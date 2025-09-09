@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/1000Div2/1000Div2.iml" filepath="$PROJECT_DIR$/1000Div2/1000Div2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1002Div2/1002Div2.iml" filepath="$PROJECT_DIR$/1002Div2/1002Div2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1003Div4/1003Div4.iml" filepath="$PROJECT_DIR$/1003Div4/1003Div4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1004DIv2/1004DIv2.iml" filepath="$PROJECT_DIR$/1004DIv2/1004DIv2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1005Div2/1005Div2.iml" filepath="$PROJECT_DIR$/1005Div2/1005Div2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1006Div3/1006Div3.iml" filepath="$PROJECT_DIR$/1006Div3/1006Div3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1007Div2/1007Div2.iml" filepath="$PROJECT_DIR$/1007Div2/1007Div2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/994Div2/994Div2.iml" filepath="$PROJECT_DIR$/994Div2/994Div2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/995Div3/995Div3.iml" filepath="$PROJECT_DIR$/995Div3/995Div3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/997Div2/997Div2.iml" filepath="$PROJECT_DIR$/997Div2/997Div2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/998Div3/998Div3.iml" filepath="$PROJECT_DIR$/998Div3/998Div3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codeforces.iml" filepath="$PROJECT_DIR$/codeforces.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ed174DIv2/ed174DIv2.iml" filepath="$PROJECT_DIR$/ed174DIv2/ed174DIv2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ed175Div2/ed175Div2.iml" filepath="$PROJECT_DIR$/ed175Div2/ed175Div2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab/lab.iml" filepath="$PROJECT_DIR$/lab/lab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/src.iml" filepath="$PROJECT_DIR$/src/src.iml" />
+    </modules>
+  </component>
+</project>
