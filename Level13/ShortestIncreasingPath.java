@@ -16,7 +16,6 @@ public class ShortestIncreasingPath {
                 System.out.println(2);
             } else {
                 System.out.println(3);
-
             }
         }
     }

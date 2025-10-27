@@ -18,10 +18,8 @@ public class ArrayElimination {
         while (t-- > 0) {
             long n = sc.nextLong();
             Map<Long, Long> hm = new HashMap<>();
-
             for (long i = 0; i < n; i++) {
                 long curr = sc.nextLong();
-
                 for (int j = 0; j <= 30; j++) {
                     if ((curr & (1 << j)) != 0) {
                         hm.put((long) j, hm.getOrDefault((long) j, 0L) + 1L);
