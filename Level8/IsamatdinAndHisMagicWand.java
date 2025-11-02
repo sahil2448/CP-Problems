@@ -8,7 +8,7 @@ public class IsamatdinAndHisMagicWand {
         int t = sc.nextInt();
 
         while (t-- > 0) {
-            int n = sc.nextInt();
+            int n = sc.nextInt();//
             int a[] = new int[n];
             int even = 0;
             int odd = 0;
