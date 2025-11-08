@@ -10,26 +10,32 @@ public class NoCasinoInMountains {
         while (t-- > 0) {
             int n = sc.nextInt();
             int k = sc.nextInt();
-            int a[] = new int[n + 1];
+            int a[] = new int[n];
 
-            for (int i = 1; i <= n; i++) {
+            for (int i = 0; i < n; i++) {
                 a[i] = sc.nextInt();
             }
-            int ans = 0;
-            int cnt = 0;
-            for (int i = 1; i <= n; i++) {
+
+            int hikes = 0;
+            int count = 0;
+
+            for (int i = 0; i < n; i++) {
+
                 if (a[i] == 1) {
-                    ans += (cnt + 1) / (k + 1);
-                    cnt = 0;
+                    count = 0;
                     continue;
-                } else {
-                    cnt++;
+                }
+
+                count++;
+
+                if (count == k) {
+                    hikes++;
+                    count = 0;
+                    i++;
                 }
             }
-            ans += (cnt + 1) / (k + 1);
 
-            System.out.println(ans);
-
+            System.out.println(hikes);
         }
     }
 }
