@@ -19,8 +19,7 @@ public class SubsetMultiplication {
             for (int i = 1; i < n; i++) {
                 if (a[i] % a[i - 1] != 0) {
                     long g = gcd(a[i], a[i - 1]);
-                    long val = a[i - 1] / g;
-                    ans = lcm(ans, val);
+                    ans = lcm(ans, a[i - 1] / g);
                 }
             }
 
@@ -39,10 +38,11 @@ public class SubsetMultiplication {
         return x;
     }
 
-    static long lcm(long x, long y) {
+    public static long lcm(long x, long y) {
         if (x == 0 || y == 0) {
             return 0;
         }
         return x / gcd(x, y) * y;
     }
+
 }
