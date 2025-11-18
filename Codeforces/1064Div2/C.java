@@ -35,7 +35,7 @@ public class C {
                 }
                 st.push(cur);
             }
-            
+
             while (st.size() > 2) {
                 long mid = st.pop();
                 ans += st.peek();
