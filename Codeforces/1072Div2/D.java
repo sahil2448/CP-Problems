@@ -1,8 +1,7 @@
-
 import java.io.*;
 import java.util.*;
 
-public class ClockAndStrings {
+public class D {
 
     static final int MOD = 1000000007;
     static final int INF = (int) 1e9;
@@ -73,40 +72,11 @@ public class ClockAndStrings {
         }
         out.flush();
 
-        // System.err.println("Total Execution Time: " + totalExecutionTime + " ms");
-    } 
+        System.err.println("Total Execution Time: " + totalExecutionTime + " ms");
+    }
 
     static void solve() throws IOException {
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int c = sc.nextInt();
-        int d = sc.nextInt();
 
-        boolean inArcC = false, inArcD = false;
-        int cur = a;
-        while (true) {
-            if (cur == c) {
-                inArcC = true;
-            }
-            if (cur == d) {
-                inArcD = true;
-            }
-            if (cur == b) {
-                break;
-
-            }
-            cur++;
-            if (cur == 13) {
-                cur = 1;
-
-            }
-        }
-
-        if (inArcC ^ inArcD) {
-            System.out.println("YES");
-        } else {
-            System.out.println("NO");
-        }
     }
 
     // ---------------- MODULAR ARITHMETIC ----------------

@@ -2,7 +2,7 @@
 import java.io.*;
 import java.util.*;
 
-public class ClockAndStrings {
+public class A {
 
     static final int MOD = 1000000007;
     static final int INF = (int) 1e9;
@@ -74,39 +74,35 @@ public class ClockAndStrings {
         out.flush();
 
         // System.err.println("Total Execution Time: " + totalExecutionTime + " ms");
-    } 
+    }
 
     static void solve() throws IOException {
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int c = sc.nextInt();
-        int d = sc.nextInt();
+        int n = sc.nextInt();
+        int h = sc.nextInt();
+        int l = sc.nextInt();
 
-        boolean inArcC = false, inArcD = false;
-        int cur = a;
-        while (true) {
-            if (cur == c) {
-                inArcC = true;
-            }
-            if (cur == d) {
-                inArcD = true;
-            }
-            if (cur == b) {
-                break;
+        int r = 0;
+        int c = 0;
+        int both = 0;
 
-            }
-            cur++;
-            if (cur == 13) {
-                cur = 1;
+        for (int i = 0; i < n; i++) {
+            int a = sc.nextInt();
+            boolean rowPoss = (a <= h);
+            boolean colPoss = (a <= l);
 
+            if (rowPoss && colPoss) {
+                both++;
+            } else if (rowPoss) {
+                r++;
+            } else if (colPoss) {
+                c++;
             }
         }
 
-        if (inArcC ^ inArcD) {
-            System.out.println("YES");
-        } else {
-            System.out.println("NO");
-        }
+        int mx = Math.min(r + both, c + both);
+        int result = Math.min(mx, (r + c + both) / 2);
+
+        System.out.println(result);
     }
 
     // ---------------- MODULAR ARITHMETIC ----------------

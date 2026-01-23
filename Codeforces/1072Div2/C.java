@@ -2,7 +2,7 @@
 import java.io.*;
 import java.util.*;
 
-public class ClockAndStrings {
+public class C {
 
     static final int MOD = 1000000007;
     static final int INF = (int) 1e9;
@@ -74,40 +74,32 @@ public class ClockAndStrings {
         out.flush();
 
         // System.err.println("Total Execution Time: " + totalExecutionTime + " ms");
-    } 
+    }
 
     static void solve() throws IOException {
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int c = sc.nextInt();
-        int d = sc.nextInt();
 
-        boolean inArcC = false, inArcD = false;
-        int cur = a;
-        while (true) {
-            if (cur == c) {
-                inArcC = true;
-            }
-            if (cur == d) {
-                inArcD = true;
-            }
-            if (cur == b) {
-                break;
-
-            }
-            cur++;
-            if (cur == 13) {
-                cur = 1;
-
-            }
+        int n = sc.nextInt();
+        int[] a = new int[n];
+        a[n - 1] = 1;
+        for (int i = 2; i <= n - 1; i++) {
+            a[i - 1] = i ^ 1;
         }
 
-        if (inArcC ^ inArcD) {
-            System.out.println("YES");
+        if (n % 2 == 0) {
+            a[0] = n;
         } else {
-            System.out.println("NO");
+            a[0] = n - 1;
         }
+        for (int i = 0; i < n; i++) {
+            System.out.print(a[i]);
+            if (i != n - 1) {
+                System.out.print(" ");
+            }
+        }
+        System.out.println();
+
     }
+    
 
     // ---------------- MODULAR ARITHMETIC ----------------
     static int modAdd(int a, int b) {

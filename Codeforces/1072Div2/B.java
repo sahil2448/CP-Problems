@@ -2,7 +2,7 @@
 import java.io.*;
 import java.util.*;
 
-public class ClockAndStrings {
+public class B {
 
     static final int MOD = 1000000007;
     static final int INF = (int) 1e9;
@@ -66,7 +66,6 @@ public class ClockAndStrings {
         int t = sc.nextInt();
         while (t-- > 0) {
             long caseStartTime = System.currentTimeMillis();
-
             solve();
             long caseEndTime = System.currentTimeMillis();
             totalExecutionTime += (caseEndTime - caseStartTime);
@@ -74,39 +73,41 @@ public class ClockAndStrings {
         out.flush();
 
         // System.err.println("Total Execution Time: " + totalExecutionTime + " ms");
-    } 
+    }
 
     static void solve() throws IOException {
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int c = sc.nextInt();
-        int d = sc.nextInt();
+        int n = sc.nextInt();
+        long x = sc.nextLong();
 
-        boolean inArcC = false, inArcD = false;
-        int cur = a;
-        while (true) {
-            if (cur == c) {
-                inArcC = true;
-            }
-            if (cur == d) {
-                inArcD = true;
-            }
-            if (cur == b) {
-                break;
+        long f = 0;
+        long best = Long.MIN_VALUE;
 
-            }
-            cur++;
-            if (cur == 13) {
-                cur = 1;
+        for (int i = 0; i < n; i++) {
+            long dist = sc.nextLong();
+            long len = sc.nextLong();
+            long roll = sc.nextLong();
 
+            long num = (len - 1) * dist;
+            f += num;
+
+            long net = len * dist - roll;
+
+            if (net > best) {
+                best = net;
             }
         }
 
-        if (inArcC ^ inArcD) {
-            System.out.println("YES");
+        long mn;
+        if (x <= f) {
+            mn = 0;
+        } else if (best <= 0) {
+            mn = -1;
         } else {
-            System.out.println("NO");
+            long remaining = x - f;
+            mn = (remaining + best - 1) / best;
         }
+
+        System.out.println(mn);
     }
 
     // ---------------- MODULAR ARITHMETIC ----------------
