@@ -16,15 +16,15 @@ class DisjointSetUnion {
             parent.add(i);
             size.add(1);
         }
-
     }
 
     public int findPar(int x) {
         if (parent.get(x) == x) {
             return x;
         }
-        parent.add(x, parent.get(x));
-        return parent.get(x);
+        int p = findPar(parent.get(x));
+        parent.set(x, p);
+        return p;
     }
 
     public void unionByRank(int u, int v) {
